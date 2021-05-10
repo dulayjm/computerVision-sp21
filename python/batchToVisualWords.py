@@ -20,7 +20,6 @@ def batch_to_visual_words (num_cores, point_method):
     filterBank = create_filterbank()
 
     # def worker_to_visual_words (wind):
-    print('HERE')
     for j in range(math.ceil(len(all_imagenames) / num_cores)):
         # img_ind = j * num_cores + wind
         img_ind = j

@@ -9,7 +9,7 @@ def get_image_features (wordMap, dictionarySize):
     # for i in wordMap: 
     h = np.histogram(wordMap, dictionarySize)
     h = h[0]
-    print('h', len(h))
+    
 
     # ----------------------------------------------
     return h

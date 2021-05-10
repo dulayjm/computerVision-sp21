@@ -21,20 +21,23 @@ if __name__ == '__main__':
     filterBank = create_filterbank()
 
     # for random set 
-    imageFeaturesRandom = None
+    imageFeaturesRandom = []
     for i in range(len(train_imagenames)): 
         img_name = train_imagenames[i]
         img = cv2.imread ('../data/%s' % img_name)
         wordMap = get_visual_words(img, randomWordsDictionary, filterBank)
-        imageFeaturesRandom = get_image_features(wordMap, len(randomWordsDictionary))
+        fts = get_image_features(wordMap, len(randomWordsDictionary))
+        imageFeaturesRandom.append(fts)
 
     # for harris set 
-    imageFeaturesHarris = None
+    imageFeaturesHarris = []
+    # so you messed up here, you need to build the images for all of them
     for i in range(len(train_imagenames)):
         img_name = train_imagenames[i]
         img = cv2.imread ('../data/%s' % img_name) 
         wordMap = get_visual_words(img, harrisWordsDictionary, filterBank)
-        imageFeaturesHarris = get_image_features(wordMap, len(harrisWordsDictionary))
+        fts = get_image_features(wordMap, len(harrisWordsDictionary))
+        imageFeaturesHarris.append(fts)
 
     visionRandom = {
         'dictionary': randomWordsDictionary,
