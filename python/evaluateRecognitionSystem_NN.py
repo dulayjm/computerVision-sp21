@@ -13,7 +13,7 @@ test_imagenames = meta['test_imagenames']
 testLabels = meta['test_labels']
 
 # -----fill in your implementation here --------
-meta = pickle.load(open('/Users/justindulay/Downloads/scene_classification/python/visionRandom.pkl', 'rb'))
+meta = pickle.load(open('visionRandom.pkl', 'rb'))
 trainHist = meta['trainFeatures']
 trainLabels = meta['trainLabels']
 filterBank = meta['filterBank']

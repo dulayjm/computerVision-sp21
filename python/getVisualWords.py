@@ -8,12 +8,6 @@ from getHarrisPoints import get_harris_points
 def get_visual_words (img, dictionary, filterBank):
 
     # -----fill in your implementation here --------
-    # apply filters
-    # (maybe do points, probably not)
-    # then assign label from the dictionary 
-
-
-
     responses = np.array([cv2.filter2D(img, -1, k) for k in filterBank])
     print('responses.shape', responses.shape)
     print('dictionary.shape', dictionary.shape)

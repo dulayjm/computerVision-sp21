@@ -21,6 +21,7 @@ def get_dictionary(imgPaths, alpha, K, method):
         
         # -----fill in your implementation here --------
         responses = np.array([cv2.filter2D(img, -1, k) for k in filterBank])
+        responses = extract_filter_responses(img, filterBank)
         for response in responses:
             points = []
             if method == 'Random':

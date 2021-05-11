@@ -28,7 +28,7 @@ if __name__ == "__main__":
 
     print("len of fb", len(fb))
 
-    img = cv2.imread ("/Users/justindulay/Downloads/scene_classification/data/football_stadium/sun_abcyqxcuxdpbmgkn.jpg")
+    img = cv2.imread ("../data/football_stadium/sun_abcyqxcuxdpbmgkn.jpg")
 
 #    gray = cv2.cvtColor (img, cv2.COLOR_BGR2GRAY)
 #    print (extract_filter_responses (gray, fb))
