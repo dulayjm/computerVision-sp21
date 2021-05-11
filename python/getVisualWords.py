@@ -4,6 +4,7 @@ from extractFilterResponses import extract_filter_responses
 import cv2
 from getRandomPoints import get_random_points
 from getHarrisPoints import get_harris_points
+from skimage.color import label2rgb
 
 def get_visual_words (img, dictionary, filterBank):
 
@@ -21,10 +22,13 @@ def get_visual_words (img, dictionary, filterBank):
     print('m.shape', m.shape)
 
     wordMap = cdist(m, dictionary)
-    print('the type of the word map is: ', type(wordMap))
-    print('the word map is:', wordMap)
-    print('the length of the wordMap is', len(wordMap))
+
+
+    # print('word map type', wordMap.shape)
+    # w = label2rgb(wordMap[0][0])
+    # print('type of w', type(w))
+    # im_bgr = cv2.cvtColor(w, cv2.COLOR_RGB2BGR)
+    # cv2.imwrite('../q2-3_imgs/img2.png', im_bgr)
     # ----------------------------------------------
 
     return wordMap
-
